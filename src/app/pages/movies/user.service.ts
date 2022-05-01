@@ -16,7 +16,7 @@ export interface IUser {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 
 
@@ -24,7 +24,7 @@ export interface IUser {
 export class UserService {
 
   constructor(
-    private apiService: ApiService
+    private apiService: ApiService,
   ) { }
 
   deleteUserById(id: string) {

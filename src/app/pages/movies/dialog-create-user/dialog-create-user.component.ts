@@ -29,7 +29,7 @@ export interface CloudBinaryResponse {
 @Component({
   selector: 'ngx-dialog-create-user',
   templateUrl: './dialog-create-user.component.html',
-  styleUrls: ['./dialog-create-user.component.scss']
+  styleUrls: ['./dialog-create-user.component.scss'],
 })
 export class DialogCreateUserComponent implements OnInit {
   userRegister: FormGroup;
@@ -51,17 +51,18 @@ export class DialogCreateUserComponent implements OnInit {
 
     if (this.userRegister.valid) {
       this.formData = new FormData();
-      this.formData.append("file", this.fileAvatar);
-      this.formData.append("folder", "MovieProject/User");
-      this.formData.append("upload_preset", "yeaeraza");
-      this.apiService.postData<CloudBinaryResponse>('https://api.cloudinary.com/v1_1/cuongpham/image/upload', this.formData)
+      this.formData.append('file', this.fileAvatar);
+      this.formData.append('folder', 'MovieProject/User');
+      this.formData.append('upload_preset', 'yeaeraza');
+      this.apiService.postData<CloudBinaryResponse>
+        ('https://api.cloudinary.com/v1_1/cuongpham/image/upload', this.formData)
         .subscribe(res => {
           if (res && res.body) {
             this.userRegister.get('image').setValue(res.body.secure_url);
             this.userSerivce.addUser(this.userRegister.value).subscribe();
             this.ref.close();
           }
-        }
+        },
         );
     }
   }
@@ -80,7 +81,7 @@ export class DialogCreateUserComponent implements OnInit {
       position: this.fb.control(''),
       sex: this.fb.control(''),
       dateOfBirth: this.fb.control(''),
-      image: this.fb.control('')
+      image: this.fb.control(''),
     });
   }
 }

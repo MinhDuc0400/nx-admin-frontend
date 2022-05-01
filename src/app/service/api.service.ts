@@ -3,12 +3,12 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiService {
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
   ) { }
 
   getData<T>(url: string): Observable<HttpResponse<T>> {
@@ -19,7 +19,7 @@ export class ApiService {
     return this.http.post<T>(url, body, { observe: 'response', responseType: 'json'});
   }
 
-  putData<T>(url: string, body: T): Observable<HttpResponse<T>>{
+  putData<T>(url: string, body: T): Observable<HttpResponse<T>> {
     return this.http.put<T>(url, body, { observe: 'response', responseType: 'json'});
   }
 

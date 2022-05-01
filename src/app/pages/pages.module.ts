@@ -17,7 +17,7 @@ import { UsersModule } from './movies/users.module';
     DashboardModule,
     ECommerceModule,
     MiscellaneousModule,
-    UsersModule
+    UsersModule,
   ],
   declarations: [
     PagesComponent,
