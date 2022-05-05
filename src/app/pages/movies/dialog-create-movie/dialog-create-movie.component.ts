@@ -10,7 +10,7 @@ import { MoviesService } from '../movies.service';
 @Component({
   selector: 'ngx-dialog-create-movie',
   templateUrl: './dialog-create-movie.component.html',
-  styleUrls: ['./dialog-create-movie.component.scss']
+  styleUrls: ['./dialog-create-movie.component.scss'],
 })
 export class DialogCreateMovieComponent implements OnInit {
   movieForm: FormGroup;
@@ -23,7 +23,7 @@ export class DialogCreateMovieComponent implements OnInit {
     private apiService: ApiService,
     private fb: FormBuilder,
     private storage: AngularFireStorage,
-    private movieService: MoviesService
+    private movieService: MoviesService,
   ) { }
 
   ngOnInit(): void {
@@ -41,14 +41,14 @@ export class DialogCreateMovieComponent implements OnInit {
       type: this.fb.control('Phim Lẻ'),
       episodeNumber: this.fb.control(1),
       image: this.fb.control(''),
-      movieLinks: this.fb.control('')
+      movieLinks: this.fb.control(''),
     });
     this.movieForm.get('type').valueChanges.subscribe(change => {
       if (change === 'PHIM LẺ') {
         this.movieForm.get('episodeNumber').setValue(1);
       }
 
-    })
+    });
   }
 
   get movieLinks() {
@@ -73,7 +73,7 @@ export class DialogCreateMovieComponent implements OnInit {
   }
 
   submit() {
-    let movieLinks = [];
+    const movieLinks = [];
     this.formData = new FormData();
     this.formData.append('file', this.fileThumbnailMovie);
     this.formData.append('folder', 'MovieProject/User');
@@ -94,15 +94,15 @@ export class DialogCreateMovieComponent implements OnInit {
           fileRef.getDownloadURL().subscribe(url => {
             movieLinks.push({
               url,
-              episodeName: (index + 1).toString()
+              episodeName: (index + 1).toString(),
             });
             this.movieForm.get('movieLinks').setValue(movieLinks);
             this.movieService.addMovie(this.movieForm.value).subscribe(res => {
               console.log(res);
-              
-            })
-          })
-        })
+
+            });
+          });
+        }),
       ).subscribe();
     });
 

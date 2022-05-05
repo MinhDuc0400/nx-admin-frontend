@@ -7,12 +7,12 @@ export interface IStatistic {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DashboardService {
 
   constructor(
-    private apiService: ApiService
+    private apiService: ApiService,
   ) { }
 
   getTotalMoney() {

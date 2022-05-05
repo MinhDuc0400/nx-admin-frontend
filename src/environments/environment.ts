@@ -20,12 +20,12 @@ export const deal = 'https://movie-services.herokuapp.com/api/deal/';
 export const countView = 'https://movie-services.herokuapp.com/api/count-view/';
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyAm7T0pP_et17fn8Ofh1azkJkBuThMQfHI",
-  authDomain: "store-video-1a730.firebaseapp.com",
-  databaseURL: "https://store-video-1a730-default-rtdb.firebaseio.com",
-  projectId: "store-video-1a730",
-  storageBucket: "store-video-1a730.appspot.com",
-  messagingSenderId: "1076267094115",
-  appId: "1:1076267094115:web:0fb50e7d44c824afe32856",
-  measurementId: "G-1SJX2MVRVX"
-}
+  apiKey: 'AIzaSyAm7T0pP_et17fn8Ofh1azkJkBuThMQfHI',
+  authDomain: 'store-video-1a730.firebaseapp.com',
+  databaseURL: 'https://store-video-1a730-default-rtdb.firebaseio.com',
+  projectId: 'store-video-1a730',
+  storageBucket: 'store-video-1a730.appspot.com',
+  messagingSenderId: '1076267094115',
+  appId: '1:1076267094115:web:0fb50e7d44c824afe32856',
+  measurementId: 'G-1SJX2MVRVX',
+};

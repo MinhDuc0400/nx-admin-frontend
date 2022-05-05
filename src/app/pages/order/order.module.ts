@@ -26,6 +26,6 @@ import { OrderComponent } from './order.component';
     NbButtonModule,
     NbSelectModule,
     NbDialogModule.forChild(),
-  ]
+  ],
 })
 export class OrderModule { }

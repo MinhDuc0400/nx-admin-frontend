@@ -101,7 +101,7 @@ export class DashboardComponent implements OnDestroy {
       if (res) {
         this.listData = res;
       }
-    })
+    });
   }
 
   ngOnDestroy() {

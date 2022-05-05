@@ -7,7 +7,7 @@ import { MoviesService } from './movies.service';
 @Component({
   selector: 'ngx-movies',
   templateUrl: './movies.component.html',
-  styleUrls: ['./movies.component.scss']
+  styleUrls: ['./movies.component.scss'],
 })
 export class MoviesComponent implements OnInit {
 
@@ -82,7 +82,7 @@ export class MoviesComponent implements OnInit {
 
   constructor(
     private dialogService: NbDialogService,
-    private movieService: MoviesService
+    private movieService: MoviesService,
   ) {
     this.movieService.getAll().subscribe(data => {
       if (data && data.body) {

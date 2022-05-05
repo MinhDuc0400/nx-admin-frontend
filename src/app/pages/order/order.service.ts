@@ -22,12 +22,12 @@ export interface IOrder {
   user: IUser;
 }
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class OrderService {
 
   constructor(
-    private apiService: ApiService
+    private apiService: ApiService,
   ) { }
 
   findAll() {

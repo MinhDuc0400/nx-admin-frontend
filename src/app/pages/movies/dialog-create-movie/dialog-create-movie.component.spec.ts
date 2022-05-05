@@ -8,7 +8,7 @@ describe('DialogCreateMovieComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DialogCreateMovieComponent ]
+      declarations: [ DialogCreateMovieComponent ],
     })
     .compileComponents();
   });

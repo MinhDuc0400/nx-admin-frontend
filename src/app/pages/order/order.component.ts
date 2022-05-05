@@ -6,7 +6,7 @@ import { OrderService } from './order.service';
 @Component({
   selector: 'ngx-order',
   templateUrl: './order.component.html',
-  styleUrls: ['./order.component.scss']
+  styleUrls: ['./order.component.scss'],
 })
 export class OrderComponent implements OnInit {
   settings = {
@@ -75,7 +75,7 @@ export class OrderComponent implements OnInit {
   source: LocalDataSource = new LocalDataSource();
 
   constructor(
-    private orderService: OrderService
+    private orderService: OrderService,
   ) {
     this.orderService.findAll().subscribe(data => {
       if (data && data.body) {

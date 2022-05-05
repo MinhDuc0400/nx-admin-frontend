@@ -27,11 +27,11 @@ const routes: Routes = [{
     },
     {
       path: 'movies',
-      component: MoviesComponent
+      component: MoviesComponent,
     },
     {
       path: 'order',
-      component: OrderComponent
+      component: OrderComponent,
     },
     {
       path: 'layout',

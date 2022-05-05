@@ -23,7 +23,7 @@ import { OrderModule } from './order/order.module';
     MiscellaneousModule,
     UsersModule,
     MoviesModule,
-    OrderModule
+    OrderModule,
   ],
   declarations: [
     PagesComponent,

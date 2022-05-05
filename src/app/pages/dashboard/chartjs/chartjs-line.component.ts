@@ -15,7 +15,7 @@ export class ChartjsLineComponent implements OnDestroy {
 
   constructor(
     private theme: NbThemeService,
-    private dashboardService: DashboardService
+    private dashboardService: DashboardService,
     ) {
     this.themeSubscription = this.theme.getJsTheme().subscribe(config => {
 
@@ -30,8 +30,8 @@ export class ChartjsLineComponent implements OnDestroy {
               label: 'Income',
               backgroundColor: NbColorHelper.hexToRgbA(colors.primary, 0.3),
               borderColor: colors.primary,
-            }]
-          }
+            }],
+          };
         }
       });
 

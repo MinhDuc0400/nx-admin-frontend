@@ -30,12 +30,12 @@ export interface IMovie {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class MoviesService {
 
   constructor(
-    private apiService: ApiService
+    private apiService: ApiService,
   ) { }
 
   // name year country category type time episodeNumber

@@ -27,6 +27,6 @@ import { DialogCreateMovieComponent } from './dialog-create-movie/dialog-create-
     NbButtonModule,
     NbSelectModule,
     NbDialogModule.forChild(),
-  ]
+  ],
 })
 export class MoviesModule { }

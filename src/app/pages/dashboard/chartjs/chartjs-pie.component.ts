@@ -15,7 +15,7 @@ export class ChartjsPieComponent implements OnDestroy {
 
   constructor(
     private theme: NbThemeService,
-    private dashboardService: DashboardService
+    private dashboardService: DashboardService,
     ) {
     this.themeSubscription = this.theme.getJsTheme().subscribe(config => {
 
@@ -29,9 +29,9 @@ export class ChartjsPieComponent implements OnDestroy {
               {
                 data: response.body.data,
                 backgroundColor: [colors.primaryLight, colors.infoLight, colors.successLight],
-              }
-            ]
-          }
+              },
+            ],
+          };
         }
       });
 

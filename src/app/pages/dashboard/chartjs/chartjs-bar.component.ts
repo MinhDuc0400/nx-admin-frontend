@@ -28,12 +28,12 @@ export class ChartjsBarComponent implements OnDestroy {
               data: response.body.data,
               label: 'View Count',
               backgroundColor: NbColorHelper.hexToRgbA(colors.primaryLight, 0.8),
-            }]
+            }],
           };
         }
-        
-      })
-      
+
+      });
+
 
       this.options = {
         maintainAspectRatio: false,
