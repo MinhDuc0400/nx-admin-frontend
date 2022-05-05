@@ -5,7 +5,9 @@ import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ECommerceComponent } from './e-commerce/e-commerce.component';
 import { NotFoundComponent } from './miscellaneous/not-found/not-found.component';
-import { UsersComponent } from './movies/users.component';
+import { UsersComponent } from './users/users.component';
+import { MoviesComponent } from './movies/movies.component';
+import { OrderComponent } from './order/order.component';
 
 const routes: Routes = [{
   path: '',
@@ -22,6 +24,14 @@ const routes: Routes = [{
     {
       path: 'users',
       component: UsersComponent,
+    },
+    {
+      path: 'movies',
+      component: MoviesComponent
+    },
+    {
+      path: 'order',
+      component: OrderComponent
     },
     {
       path: 'layout',

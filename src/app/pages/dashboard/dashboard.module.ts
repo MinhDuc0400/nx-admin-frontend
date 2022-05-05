@@ -30,6 +30,14 @@ import { PlayerComponent } from './rooms/player/player.component';
 import { TrafficComponent } from './traffic/traffic.component';
 import { TrafficChartComponent } from './traffic/traffic-chart.component';
 import { FormsModule } from '@angular/forms';
+import { ChartjsBarComponent } from './chartjs/chartjs-bar.component';
+import { ChartjsPieComponent } from './chartjs/chartjs-pie.component';
+import { ChartModule } from 'angular2-chartjs';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { ChartjsLineComponent } from './chartjs/chartjs-line.component';
+import { ChartjsMultipleXaxisComponent } from './chartjs/chartjs-multiple-xaxis.component';
+import { ChartjsBarHorizontalComponent } from './chartjs/chartjs-bar-horizontal.component';
+import { ChartjsRadarComponent } from './chartjs/chartjs-radar.component';
 
 @NgModule({
   imports: [
@@ -46,6 +54,8 @@ import { FormsModule } from '@angular/forms';
     NbIconModule,
     NbButtonModule,
     NgxEchartsModule,
+    NgxChartsModule,
+    ChartModule,
   ],
   declarations: [
     DashboardComponent,
@@ -64,6 +74,12 @@ import { FormsModule } from '@angular/forms';
     SolarComponent,
     TrafficComponent,
     TrafficChartComponent,
+    ChartjsBarComponent,
+    ChartjsLineComponent,
+    ChartjsPieComponent,
+    ChartjsMultipleXaxisComponent,
+    ChartjsBarHorizontalComponent,
+    ChartjsRadarComponent,
   ],
 })
 export class DashboardModule { }

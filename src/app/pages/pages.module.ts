@@ -7,7 +7,11 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { ECommerceModule } from './e-commerce/e-commerce.module';
 import { PagesRoutingModule } from './pages-routing.module';
 import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
-import { UsersModule } from './movies/users.module';
+import { UsersModule } from './users/users.module';
+import { MoviesComponent } from './movies/movies.component';
+import { MoviesModule } from './movies/movies.module';
+import { OrderComponent } from './order/order.component';
+import { OrderModule } from './order/order.module';
 
 @NgModule({
   imports: [
@@ -18,6 +22,8 @@ import { UsersModule } from './movies/users.module';
     ECommerceModule,
     MiscellaneousModule,
     UsersModule,
+    MoviesModule,
+    OrderModule
   ],
   declarations: [
     PagesComponent,

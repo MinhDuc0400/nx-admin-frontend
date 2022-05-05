@@ -11,10 +11,21 @@
 export const environment = {
   production: false,
 };
-export const apiKey = 'http://172.25.17.129:8080/api/';
-export const statistic = 'http://172.25.17.129:8080/api/statistic/';
-export const user = 'http://172.25.17.129:8080/api/user/';
-export const order = 'http://172.25.17.129:8080/api/order/';
-export const movie = 'http://172.25.17.129:8080/api/movie/';
-export const deal = 'http://172.25.17.129:8080/api/deal/';
-export const countView = 'http://172.25.17.129:8080/api/count-view/';
+export const apiKey = 'https://movie-services.herokuapp.com/api/';
+export const statistic = 'https://movie-services.herokuapp.com/api/statistic/';
+export const user = 'https://movie-services.herokuapp.com/api/user/';
+export const order = 'https://movie-services.herokuapp.com/api/order/';
+export const movie = 'https://movie-services.herokuapp.com/api/movie/';
+export const deal = 'https://movie-services.herokuapp.com/api/deal/';
+export const countView = 'https://movie-services.herokuapp.com/api/count-view/';
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyAm7T0pP_et17fn8Ofh1azkJkBuThMQfHI",
+  authDomain: "store-video-1a730.firebaseapp.com",
+  databaseURL: "https://store-video-1a730-default-rtdb.firebaseio.com",
+  projectId: "store-video-1a730",
+  storageBucket: "store-video-1a730.appspot.com",
+  messagingSenderId: "1076267094115",
+  appId: "1:1076267094115:web:0fb50e7d44c824afe32856",
+  measurementId: "G-1SJX2MVRVX"
+}

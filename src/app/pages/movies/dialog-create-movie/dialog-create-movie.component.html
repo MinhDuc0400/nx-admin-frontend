@@ -1,0 +1,116 @@
+<nb-card>
+    <nb-card-header>Add New Movie</nb-card-header>
+    <nb-card-body>
+        <form [formGroup]="movieForm">
+            <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label class="label">Name</label>
+                    <input formControlName="name" type="text" nbInput fullWidth placeholder="Name">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label class="label">Year</label>
+                    <input formControlName="year" type="number" nbInput fullWidth placeholder="Year">
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label class="label">IMDB</label>
+                    <input formControlName="imdb" type="number" nbInput fullWidth placeholder="IMDB">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label class="label">COuntry</label>
+                    <input formControlName="country" type="text" nbInput fullWidth placeholder="Country">
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label class="label">Director</label>
+                    <input formControlName="director" type="text" nbInput fullWidth placeholder="Director">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label class="label">Length (in min)</label>
+                    <input formControlName="time" type="number" nbInput fullWidth placeholder="Length">
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label class="label">QUality</label>
+                    <input formControlName="quality" type="text" nbInput fullWidth placeholder="Quality">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label class="label">Category</label>
+                    <input formControlName="category" type="text" nbInput fullWidth placeholder="Category">
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label class="label">Trailer (id youtube)</label>
+                    <input formControlName="trailer" type="text" nbInput fullWidth placeholder="Trailer">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label class="label">Number of Episodes</label>
+                    <input  formControlName="episodeNumber" type="number" nbInput fullWidth placeholder="Episode Number">
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label class="label">Content</label>
+                        <textarea formControlName="content" rows="5" nbInput fullWidth placeholder="Content"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label class="label">Type</label>
+                        <nb-select  formControlName="type" selected="Phim Lẻ">
+                            <nb-option value="PHIM LẺ">Phim Lẻ</nb-option>
+                            <nb-option value="PHIM BỘ">Phim Bộ</nb-option>
+                        </nb-select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label class="label">Thumbnail</label>
+                    <input type="file" (change)="fileThumbnailMovieChangeEvent($event.target.files)" nbInput fullWidth placeholder="Thumbnail">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label class="label">Movies</label>
+                    <input type="file" (change)="fileMovieChangeEvent($event.target.files)" nbInput fullWidth multiple placeholder="Moive">
+                  </div>
+                </div>
+            </div>
+        </form>
+
+
+    </nb-card-body>
+    <nb-card-footer>
+        <button class="cancel" nbButton status="danger" (click)="cancel()">Cancel</button>
+        <button nbButton status="success" (click)="submit()">Submit</button>
+    </nb-card-footer>
+</nb-card>

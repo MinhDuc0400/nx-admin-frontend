@@ -1,7 +1,9 @@
 import {Component, OnDestroy} from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
-import { takeWhile } from 'rxjs/operators' ;
+import { forkJoin, Observable } from 'rxjs';
+import { map, takeWhile } from 'rxjs/operators' ;
 import { SolarData } from '../../@core/data/solar';
+import { DashboardService } from './dashboard.service';
 
 interface CardSettings {
   title: string;
@@ -17,7 +19,7 @@ interface CardSettings {
 export class DashboardComponent implements OnDestroy {
 
   private alive = true;
-
+  public listData: number[];
   solarValue: number;
   lightCard: CardSettings = {
     title: 'Light',
@@ -79,18 +81,27 @@ export class DashboardComponent implements OnDestroy {
   };
 
   constructor(private themeService: NbThemeService,
-              private solarService: SolarData) {
+              private solarService: SolarData,
+              private dashboardService: DashboardService) {
     this.themeService.getJsTheme()
       .pipe(takeWhile(() => this.alive))
       .subscribe(theme => {
         this.statusCards = this.statusCardsByThemes[theme.name];
     });
+  }
 
-    this.solarService.getSolarData()
-      .pipe(takeWhile(() => this.alive))
-      .subscribe((data) => {
-        this.solarValue = data;
-      });
+  ngOnInit(): void {
+    const getTotalView = this.dashboardService.getTotalView();
+    const getTotalMoney = this.dashboardService.getTotalMoney();
+    const getTotalOrder = this.dashboardService.getTotalOrder();
+    const getTotalUser = this.dashboardService.getTotalUser();
+
+    forkJoin([getTotalView, getTotalMoney, getTotalOrder, getTotalUser]).pipe(map(el => el.map(el => el.body))).subscribe(res => {
+      console.log(res);
+      if (res) {
+        this.listData = res;
+      }
+    })
   }
 
   ngOnDestroy() {

@@ -1,0 +1,18 @@
+<nb-card>
+    <nb-card-header>
+      Users List
+    </nb-card-header>
+  
+    <nb-card-body>
+      <button nbButton (click)="open3()">Add New Movie</button>
+  
+      <ng2-smart-table
+        [settings]="settings"
+        [source]="source"
+        (createConfirm)="onCreateConfirm($event)"
+        (editConfirm)="onEditConfirm($event)"
+        (deleteConfirm)="onDeleteConfirm($event)">
+      </ng2-smart-table>
+    </nb-card-body>
+</nb-card>
+  

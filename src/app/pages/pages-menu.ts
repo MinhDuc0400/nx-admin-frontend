@@ -18,6 +18,16 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/pages/users',
   },
   {
+    title: 'Movies',
+    icon: 'home-outline',
+    link: '/pages/movies',
+  },
+  {
+    title: 'Order',
+    icon: 'home-outline',
+    link: '/pages/order',
+  },
+  {
     title: 'FEATURES',
     group: true,
   },
